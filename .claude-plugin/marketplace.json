@@ -1,0 +1,12 @@
+{
+  "name": "shhots-claude-skills",
+  "description": "Free Claude skills that pair with the Shhots AI MCP server to plan, write, and generate product ad creative from chat",
+  "owner": { "name": "Shhots AI", "url": "https://shhots.ai" },
+  "plugins": [
+    {
+      "name": "shhots",
+      "source": "./plugins/shhots",
+      "description": "All six Shhots ad-creative skills: UGC ads, photoshoots, campaigns, creative refresh, UGC styles, and image ads"
+    }
+  ]
+}
