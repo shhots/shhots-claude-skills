@@ -15,26 +15,20 @@ Free Claude skills that pair with the [Shhots AI MCP server](https://shhots.ai/m
 
 ## Install
 
-**Claude Code / Cowork (plugin marketplace):**
+**Claude Code / Cowork (plugin marketplace)** — one command installs all six skills:
 ```
 /plugin marketplace add shhots/shhots-claude-skills
-/plugin install shhots-ugc-ads@shhots-claude-skills
+/plugin install shhots@shhots-claude-skills
 ```
-Install any other skill the same way: `shhots-image-ads@shhots-claude-skills`, `shhots-photoshoot@shhots-claude-skills`, `shhots-campaign@shhots-claude-skills`, `shhots-creative-refresh@shhots-claude-skills`, `shhots-ugc-styles@shhots-claude-skills`.
 
-**Teams:** pin the whole suite into a project by adding the marketplace and plugins to `.claude/settings.json`:
+**Teams:** pin the suite into a project by adding this to `.claude/settings.json`:
 ```json
 {
   "extraKnownMarketplaces": [
     { "source": "github", "repo": "shhots/shhots-claude-skills" }
   ],
   "enabledPlugins": {
-    "shhots-ugc-ads@shhots-claude-skills": true,
-    "shhots-photoshoot@shhots-claude-skills": true,
-    "shhots-campaign@shhots-claude-skills": true,
-    "shhots-creative-refresh@shhots-claude-skills": true,
-    "shhots-ugc-styles@shhots-claude-skills": true,
-    "shhots-image-ads@shhots-claude-skills": true
+    "shhots@shhots-claude-skills": true
   }
 }
 ```
