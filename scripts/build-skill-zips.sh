@@ -19,6 +19,11 @@ mkdir -p "$dist"
 
 for skill_dir in "$repo_root"/plugins/*/skills/*/; do
   name="$(basename "$skill_dir")"
+  # Each skill exists twice (in the shhots bundle plugin and in its own
+  # plugin); the copies are identical, so build each name only once.
+  if [ -e "$staging/$name" ]; then
+    continue
+  fi
   cp -R "$skill_dir" "$staging/$name"
 
   python3 - "$staging/$name/SKILL.md" "$repo_root/scripts/claude-ai-descriptions.json" "$name" <<'PY'
